@@ -42,6 +42,10 @@ public class MeteorInput
         return (mInputVector.x != 0 || mInputVector.y != 0);
     }
 
+    public void OnAxisKeyPressing(EKeyList k) {
+        OnKeyPressingProxy(k);
+    }
+
     public void OnAxisKeyPress(EKeyList k)
     {
         OnKeyDownProxy(k);
@@ -205,7 +209,7 @@ public class MeteorInput
                     Main.Ins.JoyStick.ProcessKey(keyStatus);
                 }
             } else {
-#if (UNITY_EDITOR || UNITY_STANDALONE_WIN) && !STRIP_KEYBOARD
+#if (UNITY_EDITOR || UNITY_STANDALONE_WIN)
                 //底下做的是与键盘同步，多输入设备会让其他设备的输出,被键盘状态刷新掉
                 if (string.IsNullOrEmpty(keyStatus.AxisName))
                     continue;
@@ -291,13 +295,15 @@ public class MeteorInput
             int inputEnd = p.Next.End;
             int curIndex = mOwner.ActionMgr.GetCurrentFrameIndex();
             //边界条件会导致部分招式衔接过快
-            if (p.Next.Start < curIndex && curIndex < inputEnd)
-            {
+            //if (posMng.IsInKeyFrame(p.Next.Start, inputEnd)) {
+            //    return true;
+            //} else
+            //    return false;
+            if (p.Next.Start < curIndex && curIndex < inputEnd) {
                 //if (posMng.mActiveAction.Idx >= 295 && posMng.mActiveAction.Idx <= 300)
                 //    Debug.LogError("pos:" + p.Idx + " p.next start:" + p.Next.Start + "  cur index = " + curIndex + " input end:" + inputEnd);
                 return true;
-            }
-            else
+            } else
                 return false;
         }
         else
@@ -359,9 +365,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 31://下上上A 阎罗
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -378,9 +381,6 @@ public class MeteorInput
                             result = true;
                         break;
                     case 88://下下A 地面小绝 下扎
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -390,9 +390,6 @@ public class MeteorInput
                         }
                         break;
                     case 150://空中下下A
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -420,9 +417,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 71://大绝招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -435,9 +429,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 155://旋风斩
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -447,9 +438,6 @@ public class MeteorInput
                         }
                         break;
                     case 156://雷电斩
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -470,9 +458,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 143://地面八方绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -485,9 +470,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 4://落樱雪
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -502,9 +484,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 144://空中八方绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -523,9 +502,7 @@ public class MeteorInput
                         result = true;
                         break;
                     case 7:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else if (mOwner.AngryValue < 20)
+                        if (mOwner.AngryValue < 20)
                             result = false;
                         else
                         {
@@ -534,9 +511,6 @@ public class MeteorInput
                         }
                         break;
                     case 8://大绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -546,9 +520,6 @@ public class MeteorInput
                         }
                         break;
                     case 147://小绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -571,9 +542,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 12:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -583,9 +551,6 @@ public class MeteorInput
                         }
                         break;
                     case 145:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -595,9 +560,6 @@ public class MeteorInput
                         }
                         break;
                     case 146:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -625,9 +587,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 21:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -642,9 +601,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 148://左右上小绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -654,9 +610,6 @@ public class MeteorInput
                         }
                         break;
                     case 149://加速BUFF
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -683,9 +636,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 45://大招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -699,9 +649,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 151://左右A剑气
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -711,9 +658,6 @@ public class MeteorInput
                         }
                         break;
                     case 152://右左A小绝旋转
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -740,9 +684,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 58://大招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -756,9 +697,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 153://强攻 前前前A
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -768,9 +706,6 @@ public class MeteorInput
                         }
                         break;
                     case 154://左右下A 小绝招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -796,9 +731,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 82://铜皮
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -811,9 +743,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 157://震荡波
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -823,9 +752,6 @@ public class MeteorInput
                         }
                         break;
                     case 158://大绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -879,9 +805,6 @@ public class MeteorInput
                         result = mOwner.GetWeaponSubType() == 2;
                         if (result)
                         {
-                            if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                                result = true;
-                            else
                             if (mOwner.AngryValue < 100)
                                 result = false;
                             else
@@ -899,9 +822,6 @@ public class MeteorInput
                         result = mOwner.GetWeaponSubType() == 1;
                         if (result)
                         {
-                            if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                                result = true;
-                            else
                             if (mOwner.AngryValue < 60)
                                 result = false;
                             else
@@ -915,9 +835,6 @@ public class MeteorInput
                         result = mOwner.GetWeaponSubType() == 0;
                         if (result)
                         {
-                            if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                                result = true;
-                            else
                             if (mOwner.AngryValue < 60)
                                 result = false;
                             else
@@ -962,9 +879,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 115:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -980,9 +894,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 120://大绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -992,9 +903,6 @@ public class MeteorInput
                         }
                         break;
                     case 121://嗜血
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1017,9 +925,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 128://忍术-隐忍
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 50)
                             result = false;
                         else
@@ -1038,9 +943,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 136://天地同寿
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 50)
                             result = false;
                         else
@@ -1056,9 +958,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 141://忍爆弹-忍大招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 50)
                             result = false;
                         else
@@ -1068,9 +967,6 @@ public class MeteorInput
                         }
                         break;
                     case 142://左右A 10气
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 10)
                             result = false;
                         else
@@ -1131,9 +1027,6 @@ public class MeteorInput
                 result = nextPose == 2;
                 if (result)
                 {
-                    if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                        result = true;
-                    else
                     if (mOwner.AngryValue < 100)
                         result = false;
                     else
@@ -1151,9 +1044,6 @@ public class MeteorInput
                 result = nextPose == 1;
                 if (result)
                 {
-                    if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                        result = true;
-                    else
                     if (mOwner.AngryValue < 60)
                         result = false;
                     else
@@ -1167,9 +1057,6 @@ public class MeteorInput
                 result = nextPose == 0;
                 if (result)
                 {
-                    if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                        result = true;
-                    else
                     if (mOwner.AngryValue < 60)
                         result = false;
                     else
@@ -1219,9 +1106,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 31://下上上A 阎罗
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1238,9 +1122,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 88://下下A 地面小绝 下扎
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1250,9 +1131,6 @@ public class MeteorInput
                         }
                         break;
                     case 150://空中下下A
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1280,9 +1158,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 71://大绝招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1295,9 +1170,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 155://旋风斩
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1307,9 +1179,6 @@ public class MeteorInput
                         }
                         break;
                     case 156://雷电斩
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1330,9 +1199,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 143://地面八方绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1345,9 +1211,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 4://落樱雪
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1362,9 +1225,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 144://空中八方绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1384,9 +1244,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 8://大绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1396,9 +1253,6 @@ public class MeteorInput
                         }
                         break;
                     case 147://小绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1424,9 +1278,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 12:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1436,9 +1287,6 @@ public class MeteorInput
                         }
                         break;
                     case 145:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1448,9 +1296,6 @@ public class MeteorInput
                         }
                         break;
                     case 146:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1478,9 +1323,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 21:
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1495,9 +1337,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 148://左右上小绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1507,9 +1346,6 @@ public class MeteorInput
                         }
                         break;
                     case 149://加速BUFF
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1536,9 +1372,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 45://大招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1552,9 +1385,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 151://左右A剑气
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1564,9 +1394,6 @@ public class MeteorInput
                         }
                         break;
                     case 152://右左A小绝旋转
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1593,9 +1420,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 58://大招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1609,9 +1433,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 153://强攻 前前前A
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1621,9 +1442,6 @@ public class MeteorInput
                         }
                         break;
                     case 154://左右下A 小绝招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1649,9 +1467,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 82://铜皮
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1664,9 +1479,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 157://震荡波
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 60)
                             result = false;
                         else
@@ -1676,9 +1488,6 @@ public class MeteorInput
                         }
                         break;
                     case 158://大绝
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 100)
                             result = false;
                         else
@@ -1732,9 +1541,6 @@ public class MeteorInput
                         result = mOwner.GetWeaponSubType() == 2;
                         if (result)
                         {
-                            if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                                result = true;
-                            else
                             if (mOwner.AngryValue < 100)
                                 result = false;
                             else
@@ -1752,9 +1558,6 @@ public class MeteorInput
                         result = mOwner.GetWeaponSubType() == 1;
                         if (result)
                         {
-                            if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                                result = true;
-                            else
                             if (mOwner.AngryValue < 60)
                                 result = false;
                             else
@@ -1768,9 +1571,6 @@ public class MeteorInput
                         result = mOwner.GetWeaponSubType() == 0;
                         if (result)
                         {
-                            if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                                result = true;
-                            else
                             if (mOwner.AngryValue < 60)
                                 result = false;
                             else
@@ -1794,9 +1594,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 128://忍术-隐忍
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 50)
                             result = false;
                         else
@@ -1815,9 +1612,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 136://天地同寿
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 50)
                             result = false;
                         else
@@ -1833,9 +1627,6 @@ public class MeteorInput
                         result = true;
                         break;
                     case 141://忍爆弹-忍大招
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 50)
                             result = false;
                         else
@@ -1845,9 +1636,6 @@ public class MeteorInput
                         }
                         break;
                     case 142://左右A 10气
-                        if (GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && mOwner.Attr.IsPlayer)
-                            result = true;
-                        else
                         if (mOwner.AngryValue < 10)
                             result = false;
                         else

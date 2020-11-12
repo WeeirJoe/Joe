@@ -18,7 +18,7 @@ function npc04_01()
 	class.Aim = 90;
 	class.GetItem = 10;
 	class.Spawn = 72;
-	class.HP = 5000;	
+	class.HP = 3500;	
 
 	class.g_selfAddr = 0;
 	class.g_self = 0;

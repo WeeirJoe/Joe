@@ -105,6 +105,10 @@ public class SettingDialog : Dialog {
         EnableGamePad.isOn = GameStateMgr.Ins.gameStatus.UseGamePad;
         EnableGamePad.onValueChanged.AddListener((bool selected) => { GameStateMgr.Ins.gameStatus.UseGamePad = selected; Main.Ins.JoyStick.enabled = selected; });
 
+        Toggle EnableMouse = Control("EnableMouse").GetComponent<Toggle>();
+        EnableMouse.isOn = GameStateMgr.Ins.gameStatus.UseMouse;
+        EnableMouse.onValueChanged.AddListener((bool selected) => { GameStateMgr.Ins.gameStatus.UseMouse = selected;});
+        
         //显示战斗界面的调试按钮
         Toggle toggleDebug = Control("EnableSFX").GetComponent<Toggle>();
         toggleDebug.isOn = GameStateMgr.Ins.gameStatus.EnableDebugSFX;
@@ -152,10 +156,6 @@ public class SettingDialog : Dialog {
         toggleDisableParticle.isOn = GameStateMgr.Ins.gameStatus.DisableParticle;
         toggleDisableParticle.onValueChanged.AddListener(OnDisableParticle);
         OnDisableParticle(toggleDisableParticle.isOn);
-
-        Toggle toggleSkipVideo = Control("SkipVideo").GetComponent<Toggle>();
-        toggleSkipVideo.isOn = GameStateMgr.Ins.gameStatus.SkipVideo;
-        toggleSkipVideo.onValueChanged.AddListener(OnSkipVideo);
 
         Toggle toggleJoyEnable = Control("EnableJoy").GetComponent<Toggle>();
         toggleJoyEnable.isOn = GameStateMgr.Ins.gameStatus.JoyEnable;
@@ -395,11 +395,6 @@ public class SettingDialog : Dialog {
 
     void OnJoyRotateOnly(bool only) {
         GameStateMgr.Ins.gameStatus.JoyRotateOnly = only;
-    }
-
-    void OnSkipVideo(bool skip)
-    {
-        GameStateMgr.Ins.gameStatus.SkipVideo = skip;
     }
 
     void OnDisableParticle(bool disable)

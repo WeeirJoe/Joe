@@ -1,0 +1,766 @@
+
+uid~48758|path~ActionFloat/Image/Slots/Slot 1/Text|text~装死--end--
+uid~48768|path~ActionFloat/Image/Slots/Slot 2/Text|text~援助--end--
+uid~48752|path~ActionFloat/Image/Slots/Slot 3/Text|text~挑衅--end--
+uid~48742|path~ActionFloat/Image/Slots/Slot 4/Text|text~怒意--end--
+uid~49380|path~BattleResultDialog/Border/Title/PlayerName|text~玩家姓名--end--
+uid~49384|path~BattleResultDialog/Border/Title/Camp|text~阵营--end--
+uid~49430|path~BattleResultDialog/Border/Title/Killed|text~狙杀--end--
+uid~49410|path~BattleResultDialog/Border/Title/Dead|text~死亡--end--
+uid~49408|path~BattleResultDialog/Border/Title1/PlayerName|text~玩家姓名--end--
+uid~49398|path~BattleResultDialog/Border/Title1/Camp|text~阵营--end--
+uid~49368|path~BattleResultDialog/Border/Title1/Killed|text~狙杀--end--
+uid~49386|path~BattleResultDialog/Border/Title1/Dead|text~死亡--end--
+uid~49396|path~BattleResultDialog/Border/TitleAll/PlayerName|text~玩家姓名--end--
+uid~49382|path~BattleResultDialog/Border/TitleAll/Camp|text~阵营--end--
+uid~49378|path~BattleResultDialog/Border/TitleAll/Killed|text~狙杀--end--
+uid~49412|path~BattleResultDialog/Border/TitleAll/Dead|text~死亡--end--
+uid~49316|path~BattleResultDialog/Close/Text|text~离开关卡--end--
+uid~49248|path~BattleResultDialog/SaveRecord/Text|text~保存录像--end--
+uid~58690|path~BattleStatusDialog/Border/Title/PlayerName|text~玩家姓名--end--
+uid~58744|path~BattleStatusDialog/Border/Title/Camp|text~阵营--end--
+uid~58722|path~BattleStatusDialog/Border/Title/Killed|text~狙杀--end--
+uid~58706|path~BattleStatusDialog/Border/Title/Dead|text~死亡--end--
+uid~58724|path~BattleStatusDialog/Border/Title1/PlayerName|text~玩家姓名--end--
+uid~58716|path~BattleStatusDialog/Border/Title1/Camp|text~阵营--end--
+uid~58688|path~BattleStatusDialog/Border/Title1/Killed|text~狙杀--end--
+uid~58704|path~BattleStatusDialog/Border/Title1/Dead|text~死亡--end--
+uid~58700|path~BattleStatusDialog/Border/TitleAll/PlayerName|text~玩家姓名--end--
+uid~58702|path~BattleStatusDialog/Border/TitleAll/Camp|text~阵营--end--
+uid~58750|path~BattleStatusDialog/Border/TitleAll/Killed|text~狙杀--end--
+uid~58726|path~BattleStatusDialog/Border/TitleAll/Dead|text~死亡--end--
+uid~59520|path~CampSelectDialog/Meteor/Text|text~选择流星--end--
+uid~59516|path~CampSelectDialog/Butterfly/Text|text~选择蝴蝶--end--
+uid~47152|path~ChatDialog/Wnd/Header/Title|text~发送信息--end--
+uid~47374|path~ChatDialog/Wnd/Sidebar/Tabs Grid/QuickMsgTab/Text|text~快捷信号--end--
+uid~47360|path~ChatDialog/Wnd/Sidebar/Tabs Grid/ShortMsgTab/Text|text~输入文字--end--
+uid~47302|path~ChatDialog/Wnd/Sidebar/Tabs Grid/AudioMsgTab/Text|text~语音信息--end--
+uid~47380|path~ChatDialog/Wnd/Sidebar/Tabs Grid/HistoryMsgTab/Text|text~聊天记录--end--
+uid~47552|path~ChatDialog/Wnd/Tabs Content/QuickMsg/Axis/0/Text|text~一对一过招中，请勿打搅--end--
+uid~47554|path~ChatDialog/Wnd/Tabs Content/QuickMsg/Axis/1/Text|text~一对一过招中，请勿打搅--end--
+uid~47534|path~ChatDialog/Wnd/Tabs Content/QuickMsg/Axis/2/Text|text~一对一过招中，请勿打搅--end--
+uid~47548|path~ChatDialog/Wnd/Tabs Content/QuickMsg/Axis/3/Text|text~一对一过招中，请勿打搅--end--
+uid~47576|path~ChatDialog/Wnd/Tabs Content/QuickMsg/Axis/4/Text|text~一对一过招中，请勿打搅--end--
+uid~47572|path~ChatDialog/Wnd/Tabs Content/QuickMsg/Axis/5/Text|text~一对一过招中，请勿打搅--end--
+uid~47758|path~ChatDialog/Wnd/Tabs Content/QuickMsg/Axis/GameObject/CloseQuickMsg/Text|text~关闭--end--
+uid~47546|path~ChatDialog/Wnd/Tabs Content/ShortMsg/Axis/ChatText/Placeholder|text~点此输入信息--end--
+uid~47752|path~ChatDialog/Wnd/Tabs Content/ShortMsg/Axis/GameObject/SendShortMsg/Text|text~发送--end--
+uid~47766|path~ChatDialog/Wnd/Tabs Content/ShortMsg/Axis/GameObject/CloseShortMsg/Text|text~关闭--end--
+uid~47582|path~ChatDialog/Wnd/Tabs Content/AudioMsg/Axis/Panel/Text|text~点录音即可开始录制，最长可录制8秒音频，点结束录音后/超过时长后，点发送即可发送给房间的其他玩家.--end--
+uid~47760|path~ChatDialog/Wnd/Tabs Content/AudioMsg/Axis/Panel/Listen/Text|text~试听--end--
+uid~47762|path~ChatDialog/Wnd/Tabs Content/AudioMsg/Axis/Panel/CountDown/Text|text~录音中10--end--
+uid~47756|path~ChatDialog/Wnd/Tabs Content/AudioMsg/Axis/GameObject/Record/Text|text~录音--end--
+uid~47754|path~ChatDialog/Wnd/Tabs Content/AudioMsg/Axis/GameObject/SendAudio/Text|text~发送--end--
+uid~47748|path~ChatDialog/Wnd/Tabs Content/AudioMsg/Axis/GameObject/CloseAudioMsg/Text|text~关闭--end--
+uid~47618|path~ChatDialog/Wnd/Tabs Content/HistoryMsg/GameObject/CloseHistoryMsg/Text|text~关闭--end--
+uid~65214|path~ConnectServer/Tip|text~正在与目标服务器进行连接--end--
+uid~60432|path~ConnectWnd/Tip|text~正在检查是否有更新--end--
+uid~60608|path~CreateRoom/VLayout/TitleLayout/Task|text~皇天城--end--
+uid~60900|path~CreateRoom/pnl_setting/Axis/RoomName/RoomNameLayOut/Text|text~房间名--end--
+uid~61412|path~CreateRoom/pnl_setting/Axis/RoomName/RoomNameLayOut/RoomLay/RoomNameInput/Placeholder|text~Enter text...--end--
+uid~61460|path~CreateRoom/pnl_setting/Axis/RoomName/RoomNameLayOut/RoomLay/RoomNameInput/Text|text~昱泉杀手的房间--end--
+uid~60902|path~CreateRoom/pnl_setting/Axis/RoomSecret/RoomNameLayOut/Text|text~密码--end--
+uid~61416|path~CreateRoom/pnl_setting/Axis/RoomSecret/RoomNameLayOut/RoomLay/RoomSecretInput/Placeholder|text~Enter text...--end--
+uid~60728|path~CreateRoom/pnl_setting/Axis/GameRule/Text|text~游戏规则--end--
+uid~61148|path~CreateRoom/pnl_setting/Axis/GameRule/RuleGroup/0/Label|text~盟主--end--
+uid~61170|path~CreateRoom/pnl_setting/Axis/GameRule/RuleGroup/1/Label|text~暗杀--end--
+uid~61162|path~CreateRoom/pnl_setting/Axis/GameRule/RuleGroup/2/Label|text~死斗--end--
+uid~60788|path~CreateRoom/pnl_setting/Axis/GameLife/Text|text~生命上限--end--
+uid~60858|path~CreateRoom/pnl_setting/Axis/GameEx/GameTime/Text|text~时长--end--
+uid~61442|path~CreateRoom/pnl_setting/Axis/GameEx/GameTime/TimeGroup/0/Label|text~15分钟--end--
+uid~61426|path~CreateRoom/pnl_setting/Axis/GameEx/GameTime/TimeGroup/1/Label|text~30分钟--end--
+uid~61430|path~CreateRoom/pnl_setting/Axis/GameEx/GameTime/TimeGroup/2/Label|text~60分钟--end--
+uid~60898|path~CreateRoom/pnl_setting/Axis/GameEx/GamePattern/Text|text~模式--end--
+uid~61422|path~CreateRoom/pnl_setting/Axis/GameEx/GamePattern/PatternGroup/0/Label|text~普通--end--
+uid~61440|path~CreateRoom/pnl_setting/Axis/GameEx/GamePattern/PatternGroup/1/Label|text~转播--end--
+uid~60730|path~CreateRoom/pnl_setting/Axis/GamePlayer/Text|text~战场人数上限--end--
+uid~61116|path~CreateRoom/pnl_setting/Axis/GamePlayer/PlayerGroup/0/Label|text~2人--end--
+uid~61194|path~CreateRoom/pnl_setting/Axis/GamePlayer/PlayerGroup/1/Label|text~4人--end--
+uid~61154|path~CreateRoom/pnl_setting/Axis/GamePlayer/PlayerGroup/2/Label|text~8人--end--
+uid~61114|path~CreateRoom/pnl_setting/Axis/GamePlayer/PlayerGroup/3/Label|text~12人--end--
+uid~61146|path~CreateRoom/pnl_setting/Axis/GamePlayer/PlayerGroup/4/Label|text~16人--end--
+uid~60610|path~CreateRoom/pnl_setting/Screen/RecordName|text~点击图像可选择录像
+点击可切换录像--end--
+uid~60636|path~CreateRoom/pnl_menu/CreateWorld/Text|text~创建战场--end--
+uid~60612|path~CreateRoom/pnl_menu/Return/Text|text~返回--end--
+uid~62834|path~DlcManagerWnd/Wnd/Header/Title|text~资料管理器--end--
+uid~63072|path~DlcManagerWnd/Wnd/Sidebar/Tabs Grid/Chapter/Text|text~新剧情--end--
+uid~63076|path~DlcManagerWnd/Wnd/Sidebar/Tabs Grid/Model/Text|text~新角色--end--
+uid~63068|path~DlcManagerWnd/Wnd/Sidebar/Tabs Grid/Map/Text|text~新地图--end--
+uid~63070|path~DlcManagerWnd/Wnd/Tabs Content/ModelTab/ResetModel/Text|text~使用默认主角--end--
+uid~62856|path~DlcManagerWnd/Wnd/PluginPrev/Text|text~上一页--end--
+uid~62848|path~DlcManagerWnd/Wnd/PluginNext/Text|text~下一页--end--
+uid~62866|path~DlcManagerWnd/Wnd/ShowInstallToggle/Label|text~显示已安装--end--
+uid~62846|path~DlcManagerWnd/Wnd/DeletePlugin/Text|text~清理已安装--end--
+uid~62774|path~DlcManagerWnd/Wnd/Pages|text~100/100--end--
+uid~62832|path~DlcManagerWnd/Wnd/InstallAll/Text|text~安装全部--end--
+uid~62736|path~DlcManagerWnd/Wnd/Warning|text~无法连接到模组服务器--end--
+uid~62868|path~DlcManagerWnd/Wnd/Return/Text|text~返回--end--
+uid~67188|path~DlcWnd/Background/WarningWnd/Tip|text~还未安装任何资料片
+设置-模组内可下载新的资料片
+安装后即可在此启动--end--
+uid~67112|path~DlcWnd/Background/DescRoot/Desc|text~七夜听雪
+七夜杀--end--
+uid~67106|path~DlcWnd/Background/DescRoot/Title|text~七夜听雪--end--
+uid~67164|path~DlcWnd/Yes/Text|text~确定--end--
+uid~67162|path~DlcWnd/Cancel/Text|text~取消--end--
+uid~67124|path~DlcWnd/Tip|text~左右滑动可翻页--end--
+uid~67114|path~DlcWnd/PageLabel|text~剧本:未安装任何剧本--end--
+uid~67418|path~EscConfirmWnd/Header/Title|text~系统--end--
+uid~67422|path~EscConfirmWnd/Leave/Text|text~是--end--
+uid~67420|path~EscConfirmWnd/Continue/Text|text~否--end--
+uid~67394|path~EscConfirmWnd/Text|text~返回到主界面吗？--end--
+uid~67644|path~EscWnd/Wnd/Header/Title|text~系统--end--
+uid~67916|path~EscWnd/Wnd/Sidebar/Tabs Grid/AudioTab/Text|text~声音--end--
+uid~67898|path~EscWnd/Wnd/Sidebar/Tabs Grid/ControlTab/Text|text~功能--end--
+uid~67880|path~EscWnd/Wnd/Sidebar/Tabs Grid/CameraTab/Text|text~视角--end--
+uid~67872|path~EscWnd/Wnd/Sidebar/Tabs Grid/JobTab/Text|text~招式--end--
+uid~67962|path~EscWnd/Wnd/Sidebar/Tabs Grid/MissionTab/Text|text~目标--end--
+uid~67936|path~EscWnd/Wnd/Tabs Content/AudioTab/GameObject/Title Text|text~音量设置--end--
+uid~68228|path~EscWnd/Wnd/Tabs Content/AudioTab/GameObject/Box 3 (Slider)/Label|text~背景音量--end--
+uid~68230|path~EscWnd/Wnd/Tabs Content/AudioTab/GameObject/Box 4 (Advanced Slider)/Label|text~音效音量--end--
+uid~68248|path~EscWnd/Wnd/Tabs Content/ControlTab/Axis/ResetPosition/Text|text~卡死重置--end--
+uid~68210|path~EscWnd/Wnd/Tabs Content/ControlTab/Axis/ChangeModel/Text|text~切换主角模型--end--
+uid~68226|path~EscWnd/Wnd/Tabs Content/ControlTab/Axis/Snow/Text|text~雪（粒子)--end--
+uid~68256|path~EscWnd/Wnd/Tabs Content/ControlTab/Axis/DoScript/Text|text~输入指令--end--
+uid~68184|path~EscWnd/Wnd/Tabs Content/ControlTab/Axis/SetPosition/Text|text~调整按键位置--end--
+uid~68204|path~EscWnd/Wnd/Tabs Content/ControlTab/Axis/FollowEnemy/Label|text~观察电脑--end--
+uid~68202|path~EscWnd/Wnd/Tabs Content/ControlTab/Axis/PrevRobot/Text|text~观察上个电脑--end--
+uid~68186|path~EscWnd/Wnd/Tabs Content/ControlTab/Axis/NextRobot/Text|text~观察下个电脑--end--
+uid~68242|path~EscWnd/Wnd/Tabs Content/CameraTab/Axispropertits/HSlider/Label|text~水平视角灵敏度--end--
+uid~68224|path~EscWnd/Wnd/Tabs Content/CameraTab/Axispropertits/HSlider/HValue|text~1.0--end--
+uid~68232|path~EscWnd/Wnd/Tabs Content/CameraTab/Axispropertits/VSlider/Label|text~垂直视角灵敏度--end--
+uid~68254|path~EscWnd/Wnd/Tabs Content/CameraTab/Axispropertits/VSlider/VValue|text~1.0--end--
+uid~68396|path~EscWnd/Wnd/Tabs Content/JobTab/Scroll View/Viewport/Content/Mail|text~暗器
+黑蜂针 A
+雷神锥 ↑A
+赤练牙 ↓A
+八方绝 ↓↑A(需60%气)
+落樱雪 ↓↑↑A(破防，需100%气)
+黑蜂针 A(空中)
+八方绝 ↓↑A(空中，需60%气)
+
+飞轮
+一念电转 A
+十方俱灭 ↑A
+百里追魂 ↓A
+千刀万剐 ↓↑A(需60%气)
+万劫千秋 ↓↑↑A(破防，需100%气)
+一般空踢 A(空中)
+夺命轮盘 ↓↑A(空中，需60%气)
+
+火统
+烟声 A
+焦野 ↑A
+熔铁 ↓A(破防，需20%气)
+炎狱 ↓↑A(破防，需60%气)
+焚雷 ↓↑↑A(破防，需100%气)
+一般空踢 A(空中)
+
+双刺
+左扇手 A
+右扇手 A A
+虎归山 A A A
+进撵猴 ↑A
+马分鬃 ↑A↑A
+右揽鹊尾 →A
+左揽鹊尾 ←A
+双龙通臂掌 ←→A
+玉女穿梭 ↓↑A
+七星踏 ↓A
+跨虎步 ↓A↓A
+十字鞭 ↑↑A(破防)
+祥龙摆尾 ←→↑A(需60%气)
+乘风 ↓↓↑A(加速，需60%气)
+合太极 ↓←→A(破防、吸气，需100%气)
+小狮戏珠 A(空中)
+右摆莲 A A(空中)
+穿云脚 ↑A(空中)
+单鞭腿 ↑A↑A(空中)
+湖探月 ↓A(空中)
+海底针 ↓A↓A(空中)
+
+匕首
+太岁 A
+九尾 A A
+夜叉 ↑A
+旱魃 ↑A↑A
+曹沫举顶 ↑↑A
+荆轲现匕 ←A
+聂政屠犬 →A (破防)
+专诸鱼肠 ↓A
+豫让三伏 ↓↑A (破防)
+暗犽 ↓↓A(需60%气)
+阎罗 ↓↑↑A(需100%气)
+姑获 A(空中)
+奔云 A A(空中)
+鹏翼 A A A(空中)
+罗刹 ↓A(空中)
+鬼弹 ↑↓A(空中)
+降神 ↓↓A(空中，需60%气)
+
+剑
+乱草 A
+巧篆 A A
+重隶 A A A
+残日红江 ↑A
+残泉回春 ↓A
+风残草尽 ↓A↓A
+烛举焰残 ←A (破防)
+枯鹰残木 →A
+雀置喙 ↓↓A (破防)
+鹤舒翎 ↓↑A
+孤雁回 ↓↑A↓↑A
+燕双飞 ↑↓A
+忌夏日 ↑↑A
+忌秋风 ↑↑A↑↑A
+忌冬雨 ↓↑↑A
+凤凰雏 ←→A(需60%气)
+血残气丧 →←A(需60%气)
+凤凰羽 ←→↑A (破防，需100%气)
+轻行 A(空中)
+正楷 A A(空中)
+刻铭 ↓A(空中)
+
+长枪
+刺 A
+进 A A
+挑 A A A
+打 ↓A
+升 ↑A
+河东狮吼 →←A(破防)
+霸王别姬 ↓↓A
+功盖三国 ↓↑A
+力拔河山 ↑↑A
+蛟龙海覆波 ← → A
+虬龙扫暴阵 ↓↓↑A(破防)
+应龙空翔蹴 ←→↑A
+狂龙穿心破 ↑↑↑A(破防，需60%气)
+伏龙翔天破 ←→↓A(需60%气)
+万圣龙王破 ↓↑↑A(破防，需100%气)
+一般空踢 A(空中)
+坠 ↓A(空中)
+跋扈飞扬 ↓A↓A(空中)
+
+刀
+蚀月斩 A
+吞日斩 A A
+殒星斩 A A A
+浪滔天 ↑A
+断石危 ↓A (破防)
+碎岸裂 ←A (破防)
+鲛鳞腾 →A
+单刀劈马 ↑↑A (破防)
+人仰马翻 ↑↑A↑↑A (破防)
+伯乐难寻 ↓↑A
+项背汗血 ↓↓A
+赤兔穷追 ↓↓A
+旋风 ←→A
+疾风 ←→↑A
+狂风 →←A(破防，需60%气)
+雷斩 ↓↓↑A(需60%气)
+腥风 ←→↓A(破防，需100%气)
+一般空踢 A(空中)
+落崖险 ↓A(空中，破防)
+
+重锤
+金刚洞月 A
+金刚抱拳 ↑A
+金刚拜塔 ↓A
+下山虎 ↓↑A(破防)
+墨云鹤游空 ↑↑A(破防)
+奔雷炎华光 ↓↓A(破防)
+双连金钟破 ←→A(破防)
+三击铜鼓冲 →←A(破防)
+伏虎腾翔跌 ←→↓A(破防)
+焚雷震八方 ←→↑A(破防，需60%气)
+金钟罩 ↓↑↑A(加防，需100%气)
+俯爆压头灯 ↓↓↑A(破防，需100%气)
+一般空踢 A(空中)
+金刚叩首 ↓A(空中，破防)
+
+乾坤刀
+持枪式 ← A 持刀状态
+拔刀式 ↓↓A 持刀状态
+裂颜击 A 持刀状态
+断肩击 AA 持刀状态
+斩腰击 AAA 持刀状态
+邪蛇 ↓A 持刀状态
+土龙 ↓A↓A 持刀状态
+霸王落 ↑↑A (破防，需60%气) 持刀状态
+持刀式 → A 持枪状态
+劈 A 持枪状态
+勾 ↑ A 持枪状态
+轮 ↑↑ A 持枪状态
+回 ↓ A 持枪状态
+勾魂锁 ↓↑A(破防，需60%气) 持枪状态
+破喉击 A 拔刀状态
+贪噬 A A 拔刀状态
+弧月 A A A 拔刀状态
+一闪 ↓↑ A (破防)拔刀状态
+一减 ↑↓ A (破防)拔刀状态
+死斗 ↓↓↑ A (破防，需100%气) 拔刀状态
+空踢 A (空中)
+封灵之击 ↓A (空中)
+
+指虎
+虎探爪 A
+击虎须 A A
+断虎牙 A A A
+虎爪旋破 ←→ A (破防)
+左打虎 ←← A
+右打虎 →→ A
+虎扫尾 ↓ A
+奔虎箭疾 ↓↓ A
+虎啸波 ←→↑A (破防，需60%气)
+虎扬头 ↓↑A
+虎王崩击 ↑↑ A(破防)
+猛虎靠山 ↑↓ A
+疯虎百烈 ↓↑↑A
+饿虎嗜血 ↓↓↑A (加攻，需100%气)
+虎王虐袭杀 ←→↓A (破防，需100%气)
+跃虎脚 A (空中)
+飞虎脚 A A (空中)
+虎出栅 ↓A (空亭)
+
+忍刀
+忍挂踢 A
+忍下踢 AA
+忍跃斩 ↑A
+忍横斩 ↓A
+忍刀插地 ↑↓A
+忍刀后拉 ↑↓A↑↓A
+忍刀夹头 ↓↓↑A(破防)
+忍升龙腿 ↓↑A
+忍尖刀脚 ←→↑A
+忍瞬移-前 ↑↑A
+忍瞬移-后 ↓↓A
+忍瞬移-左 ←←A
+忍瞬移-右 →→A
+忍刀压制 ←→A(需10%气)
+忍同归于尽 ←→↑↓A(自杀身亡，需50%气)
+忍法隐身 ←→↓A(隐身，需50%气)
+忍暴怒爆弹 ↓↑↑A(需50%气)
+忍暴怒环杀 ↓↑↑A(破防，需50%气)
+忍空竖劈 A(空中)
+忍空横斩 AA(空中)
+忍空下踏 ↓A(空中)
+忍空移-前 ↑↑A(空中)
+忍空移-后 ↓↓A(空中)
+忍空移-左 ←←A(空中)
+忍空移-右 →→A(空中)--end--
+uid~67696|path~EscWnd/Wnd/Tabs Content/MissionTab/Title|text~前情回顾--end--
+uid~67710|path~EscWnd/Wnd/Tabs Content/MissionTab/Title|text~关卡目标--end--
+uid~67612|path~EscWnd/Wnd/Continue/Text|text~关闭--end--
+uid~67646|path~EscWnd/Wnd/QuitGame/Text|text~退出游戏--end--
+uid~70436|path~FightWnd/ActionFloat/Image/Slots/Slot 1/Text|text~装死--end--
+uid~70434|path~FightWnd/ActionFloat/Image/Slots/Slot 2/Text|text~援助--end--
+uid~70416|path~FightWnd/ActionFloat/Image/Slots/Slot 3/Text|text~挑衅--end--
+uid~70446|path~FightWnd/ActionFloat/Image/Slots/Slot 4/Text|text~怒意--end--
+uid~70414|path~FightWnd/ActionFloat/Image/Slots/Slot 5/Text|text~隐藏--end--
+uid~69410|path~FightWnd/GameTime|text~15:00--end--
+uid~69944|path~FightWnd/UIPanel/HeadPanel/HPLabel|text~9999/9999--end--
+uid~69938|path~FightWnd/MiniMap/SceneName/Title|text~炽雪城--end--
+uid~70244|path~FightWnd/SysMenu/Robot/RobotPanel/Text|text~角色--end--
+uid~70242|path~FightWnd/SysMenu/SfxMenu/DebugPanel/Text|text~特效--end--
+uid~70232|path~FightWnd/SysMenu/WeaponSelect/ControlPanel/Text|text~兵器--end--
+uid~69868|path~FightWnd/SysMenu/System/Text|text~系统--end--
+uid~70208|path~FightWnd/SysMenu2/Status/StatusPanel/Text|text~战况--end--
+uid~70212|path~FightWnd/SysMenu2/Reborn/StatusPanel/Text|text~援助--end--
+uid~70194|path~FightWnd/SysMenu2/Chat/ChatPanel/Text|text~聊天--end--
+uid~70182|path~FightWnd/SysMenu2/Prev/PrevPanel/Text|text~观察前一个--end--
+uid~70230|path~FightWnd/SysMenu2/Next/NextPanel/Text|text~观察后一个--end--
+uid~70184|path~FightWnd/SysMenu2/HideUI/HideBtn/Text|text~隐藏--end--
+uid~69670|path~FightWnd/TargetBlood/TargetHPLabel|text~900/10800--end--
+uid~69642|path~FightWnd/TargetBlood/TargetName|text~超级无敌风林火山服部千军--end--
+uid~69444|path~FightWnd/Position|text~Position:1000 1000 1000--end--
+uid~81364|path~HostEditDialog/Header/Title|text~添加服务器--end--
+uid~81352|path~HostEditDialog/Yes/Text|text~确认--end--
+uid~81368|path~HostEditDialog/Cancel/Text|text~取消--end--
+uid~81282|path~HostEditDialog/Text (4)|text~*域名和IP不同时起效 若同时填写则域名优先--end--
+uid~81452|path~HostEditDialog/Input/ServerName/Placeholder|text~服务器名...--end--
+uid~81446|path~HostEditDialog/Input/ServerHost/Placeholder|text~输入域名...--end--
+uid~81450|path~HostEditDialog/Input/ServerIP/Placeholder|text~或IP...--end--
+uid~81354|path~HostEditDialog/Label/Text|text~服务器名称:--end--
+uid~81348|path~HostEditDialog/Label/Text (1)|text~域名:--end--
+uid~81350|path~HostEditDialog/Label/Text (2)|text~IP:--end--
+uid~81362|path~HostEditDialog/Label/Text (3)|text~端口:--end--
+uid~80962|path~LevelDialog/Image/Task|text~飞鹏堡--end--
+uid~81004|path~LevelDialog/Yes/Text|text~确定--end--
+uid~80996|path~LevelDialog/Cancel/Text|text~取消--end--
+uid~80876|path~LoadingEX/Tip|text~稍等--end--
+uid~80780|path~LoadingProgressBar/Text|text~100%--end--
+uid~80652|path~LoadingWnd/LoadingBar/progressText|text~0%--end--
+uid~80650|path~LoadingWnd/LoadingBar/Goal|text~杀死XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX--end--
+uid~80184|path~LoginDialog/LoginPanel/AccountLabel|text~账号:--end--
+uid~80262|path~LoginDialog/LoginPanel/Account/Placeholder|text~账号--end--
+uid~80186|path~LoginDialog/LoginPanel/PsdLabel|text~密码:--end--
+uid~80270|path~LoginDialog/LoginPanel/Password/Placeholder|text~密码--end--
+uid~80276|path~LoginDialog/LoginPanel/AutoLogin/Label|text~自动登录--end--
+uid~80272|path~LoginDialog/LoginPanel/RemPsw/Label|text~记住密码--end--
+uid~80188|path~LoginDialog/Confirm/Text|text~登录--end--
+uid~80182|path~LoginDialog/QuickGame/Text|text~一键注册--end--
+uid~80164|path~LoginDialog/Register/Text|text~注册--end--
+uid~79558|path~MainLobby/Panel/JoinRoom/Foreground/Text|text~加入对战--end--
+uid~79542|path~MainLobby/Panel/CreateRoom/Foreground/Text|text~创造战场--end--
+uid~79536|path~MainLobby/Panel/Refresh/Foreground/Text|text~重新搜索--end--
+uid~79552|path~MainLobby/Panel/Servercfg/Foreground/Text|text~主机配置--end--
+uid~79540|path~MainLobby/Panel/Close/Foreground/Text|text~回主选单--end--
+uid~79200|path~MainLobby/Version|text~V9.07--end--
+uid~79442|path~MainLobby/VLayout/RoomInfoItem/RoomName|text~服务器名称--end--
+uid~79434|path~MainLobby/VLayout/RoomInfoItem/Text (2)|text~规则--end--
+uid~79398|path~MainLobby/VLayout/RoomInfoItem/Text (3)|text~战斗场地--end--
+uid~79418|path~MainLobby/VLayout/RoomInfoItem/Text (4)|text~密码--end--
+uid~79440|path~MainLobby/VLayout/RoomInfoItem/Text (5)|text~版本--end--
+uid~79396|path~MainLobby/VLayout/RoomInfoItem/Text (7)|text~星--end--
+uid~79394|path~MainLobby/VLayout/RoomInfoItem/Text (8)|text~蝶--end--
+uid~79416|path~MainLobby/VLayout/RoomInfoItem/Text (9)|text~玩家数量--end--
+uid~79186|path~MainLobby/Server|text~主机域名：IP：端口：--end--
+uid~78744|path~MainMenu/Panel/SinglePlayerMode/Foreground/Text|text~单机--end--
+uid~78734|path~MainMenu/Panel/MultiplePlayer/Foreground/Text|text~网络--end--
+uid~78742|path~MainMenu/Panel/PlayerSetting/Foreground/Text|text~设置--end--
+uid~78750|path~MainMenu/Panel/Dlc/Foreground/Text|text~资料片--end--
+uid~78748|path~MainMenu/Panel/Leave/Foreground/Text|text~退出--end--
+uid~78528|path~MainMenu/Version|text~V1.07--end--
+uid~78690|path~MainMenu/UploadLog/Foreground/Text|text~上传错误日志--end--
+uid~78752|path~MainMenu/SubMenu/SinglePlayer/Foreground/Text|text~主线任务--end--
+uid~78740|path~MainMenu/SubMenu/DlcLevel/Foreground/Text|text~资料片--end--
+uid~78746|path~MainMenu/SubMenu/TeachingLevel/Foreground/Text|text~基本教学--end--
+uid~78736|path~MainMenu/SubMenu/Replay/Foreground/Text|text~观看回放--end--
+uid~78738|path~MainMenu/SubMenu/CreateBattle/Foreground/Text|text~创建房间--end--
+uid~78294|path~MatchWnd/Info/Text|text~预计需时--end--
+uid~78288|path~MatchWnd/Info/TimesLeft|text~02:00--end--
+uid~78282|path~MatchWnd/Info/TimesUsed|text~02:00--end--
+uid~78280|path~MatchWnd/Info/Text (1)|text~正在排队--end--
+uid~78334|path~MatchWnd/Info/Enter/Text|text~开始排队--end--
+uid~78336|path~MatchWnd/Info/Quit/Text|text~退出排队--end--
+uid~78338|path~MatchWnd/Info/Leave/Text|text~返回--end--
+uid~77942|path~ModelWnd/Header/Title|text~角色--end--
+uid~77948|path~ModelWnd/Close/Text|text~关闭--end--
+uid~77704|path~NickName/Header/Title|text~设置昵称--end--
+uid~77646|path~NickName/Text|text~昵称:--end--
+uid~77696|path~NickName/Nick/Placeholder|text~流星--end--
+uid~77702|path~NickName/Yes/Text|text~确认--end--
+uid~77706|path~NickName/Cancel/Text|text~取消--end--
+uid~77486|path~NoticeDialog/Window (with Scroll View)/Header/Title|text~公告--end--
+uid~77418|path~NoticeDialog/Window (with Scroll View)/Scroll View/Content/Notice|text~发现新版本:
+ 更新内容
+ 1:增加新的任务
+2:修改支线bug --end--
+uid~77460|path~NoticeDialog/Close/Text|text~关闭--end--
+uid~72224|path~PlayerDialog/Header/Title|text~孟星魂--end--
+uid~72328|path~PlayerDialog/Content/Equip Receiver/Equip Hint Text|text~Drop Here to Equip--end--
+uid~72918|path~PlayerDialog/Content/Stats/Headline/Text|text~角色状态--end--
+uid~74198|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 1|text~气血--end--
+uid~74626|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 1/Stat Value|text~100/100--end--
+uid~74110|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 2|text~怒气--end--
+uid~74234|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 3|text~攻击--end--
+uid~74214|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 4|text~防御--end--
+uid~74132|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 5|text~移动速度--end--
+uid~74174|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 6|text~攻击速度--end--
+uid~74194|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 7|text~？--end--
+uid~74122|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 8|text~？--end--
+uid~74116|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 9|text~？--end--
+uid~74142|path~PlayerDialog/Content/Stats/Background/Page 1/Stats Grid/Stat Label 10|text~？--end--
+uid~74182|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 1|text~HEALTH--end--
+uid~74226|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 2|text~MANA--end--
+uid~74164|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 3|text~CRITICAL STRIKE--end--
+uid~74628|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 3/Stat Value|text~30%--end--
+uid~74186|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 4|text~HASTE--end--
+uid~74616|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 4/Stat Value|text~24%--end--
+uid~74152|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 5|text~PENETRATION--end--
+uid~74614|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 5/Stat Value|text~12.5%--end--
+uid~74268|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 6|text~PARRY--end--
+uid~74622|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 6/Stat Value|text~0%--end--
+uid~74248|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 7|text~DODGE--end--
+uid~74606|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 7/Stat Value|text~15.6%--end--
+uid~74244|path~PlayerDialog/Content/Stats/Background/Page 2/Stats Grid/Stat Label 8|text~DEFENSE RATING--end--
+uid~72404|path~PlayerDialog/Extension (Inventory)/Header/Text|text~背包--end--
+uid~72020|path~PopupTip/Title|text~警告--end--
+uid~72022|path~PopupTip/Description|text~测试日志是否正确!--end--
+uid~81828|path~PsdEditDialog/Header/Title|text~请输入密码--end--
+uid~81826|path~PsdEditDialog/Confirm/Text|text~确定--end--
+uid~81784|path~PsdEditDialog/Text|text~密码:--end--
+uid~81834|path~PsdEditDialog/PsdField/Placeholder|text~Enter text...--end--
+uid~81830|path~PsdEditDialog/Cancel/Text|text~取消--end--
+uid~95784|path~ReconnectWnd/Tip|text~服务器已断开连接--end--
+uid~95308|path~RecordDialog/Header/Title|text~录像--end--
+uid~95458|path~RecordDialog/Scroll View/Viewport/Content/RecordItem/RecordName|text~死斗_四方阵_昱泉杀手_8_联机
+--end--
+uid~95460|path~RecordDialog/Scroll View/Viewport/Content/RecordItem/Duration|text~时长:20:14:16--end--
+uid~95464|path~RecordDialog/Scroll View/Viewport/Content/RecordItem/RecordDate|text~保存日期:2020-10月-3日 19:20:35
+--end--
+uid~95388|path~RecordDialog/Menu/Play/Text|text~播放--end--
+uid~95386|path~RecordDialog/Menu/Deleted/Text|text~删除--end--
+uid~95384|path~RecordDialog/Menu/Prev/Text|text~前一页--end--
+uid~95376|path~RecordDialog/Menu/Next/Text|text~后一页--end--
+uid~95382|path~RecordDialog/Menu/Colse/Text|text~返回--end--
+uid~95246|path~RecordDialog/Total|text~录像:36--end--
+uid~95244|path~RecordDialog/Pages|text~1/3 --end--
+uid~95128|path~RecordItem/RecordName|text~死斗_四方阵_昱泉杀手_8_联机
+--end--
+uid~95134|path~RecordItem/Duration|text~时长:20:14:16--end--
+uid~95130|path~RecordItem/RecordDate|text~保存日期:2020-10月-3日 19:20:35
+--end--
+uid~94812|path~RecordItemSelect/RecordName|text~死斗_四方阵_昱泉杀手_8_联机
+--end--
+uid~94818|path~RecordItemSelect/Duration|text~时长:20:14:16--end--
+uid~94814|path~RecordItemSelect/RecordDate|text~保存日期:2020-10月-3日 19:20:35
+--end--
+uid~94458|path~RecordSelectDialog/Header/Title|text~录像-选择录像--end--
+uid~94522|path~RecordSelectDialog/Menu/Play/Text|text~选择--end--
+uid~94532|path~RecordSelectDialog/Menu/Prev/Text|text~前一页--end--
+uid~94524|path~RecordSelectDialog/Menu/Next/Text|text~后一页--end--
+uid~94530|path~RecordSelectDialog/Menu/Colse/Text|text~返回--end--
+uid~94406|path~RecordSelectDialog/Total|text~录像:36--end--
+uid~94404|path~RecordSelectDialog/Pages|text~1/3 --end--
+uid~93222|path~ReplayWnd/GameTime|text~15:00--end--
+uid~93516|path~ReplayWnd/UIPanel/HeadPanel/HPLabel|text~9999/9999--end--
+uid~93570|path~ReplayWnd/MiniMap/SceneName/Title|text~炽雪城--end--
+uid~93542|path~ReplayWnd/SysMenu/System/Text|text~退出--end--
+uid~93496|path~ReplayWnd/SysMenu/FreeCamera/Text|text~观察相机--end--
+uid~93568|path~ReplayWnd/SysMenu/FollowCamera/Text|text~主角相机--end--
+uid~93506|path~ReplayWnd/SysMenu/PrevTarget/Text|text~上个目标--end--
+uid~93498|path~ReplayWnd/SysMenu/NextTarget/Text|text~下个目标--end--
+uid~93698|path~ReplayWnd/SysMenu2/Status/StatusPanel/Text|text~战况--end--
+uid~93700|path~ReplayWnd/SysMenu2/HideUI/HideBtn/Text|text~隐藏--end--
+uid~93386|path~ReplayWnd/TargetBlood/TargetHPLabel|text~900/10800--end--
+uid~93366|path~ReplayWnd/TargetBlood/TargetName|text~疾风剑豪--end--
+uid~93302|path~ReplayWnd/LoadingProgressBar/ProgressText|text~100%--end--
+uid~53416|path~RobotDialog/Header/Title|text~角色--end--
+uid~53614|path~RobotDialog/Weapon/Weapon0/Label|text~长剑--end--
+uid~53720|path~RobotDialog/Weapon/Weapon1/Label|text~匕首--end--
+uid~53704|path~RobotDialog/Weapon/Weapon2/Label|text~火枪--end--
+uid~53672|path~RobotDialog/Weapon/Weapon3/Label|text~飞镖--end--
+uid~53632|path~RobotDialog/Weapon/Weapon4/Label|text~重锤--end--
+uid~53722|path~RobotDialog/Weapon/Weapon5/Label|text~大刀--end--
+uid~53690|path~RobotDialog/Weapon/Weapon6/Label|text~飞轮--end--
+uid~53700|path~RobotDialog/Weapon/Weapon7/Label|text~长枪--end--
+uid~53736|path~RobotDialog/Weapon/Weapon8/Label|text~双刺--end--
+uid~53740|path~RobotDialog/Weapon/Weapon9/Label|text~乾坤刀--end--
+uid~53742|path~RobotDialog/Weapon/Weapon10/Label|text~指虎--end--
+uid~53624|path~RobotDialog/Weapon/Weapon11/Label|text~忍刀--end--
+uid~53718|path~RobotDialog/Camp/Camp1/Label|text~流星--end--
+uid~53626|path~RobotDialog/Camp/Camp2/Label|text~蝴蝶--end--
+uid~53698|path~RobotDialog/Camp/Camp0/Label|text~无--end--
+uid~53710|path~RobotDialog/HP/HP0/Label|text~1000HP--end--
+uid~53702|path~RobotDialog/HP/HP1/Label|text~500HP--end--
+uid~53716|path~RobotDialog/HP/HP2/Label|text~300HP--end--
+uid~53738|path~RobotDialog/HP/HP3/Label|text~250HP--end--
+uid~53696|path~RobotDialog/HP/HP4/Label|text~200HP--end--
+uid~53650|path~RobotDialog/HP/HP5/Label|text~100HP--end--
+uid~92134|path~RoleSelectDialog/Select/Text|text~确定--end--
+uid~91806|path~ScriptInputWnd/Window/Header/Title|text~指令--end--
+uid~91772|path~ScriptInputWnd/InputField/Placeholder|text~输入秘籍：--end--
+uid~91776|path~ScriptInputWnd/DoScript/Text|text~执行--end--
+uid~91778|path~ScriptInputWnd/Close/Text|text~关闭--end--
+uid~91722|path~ScriptInputWnd/BK/Result|text~成功执行秘籍--end--
+uid~91774|path~ScriptInputWnd/BK/ResultLabel|text~执行结果--end--
+uid~91644|path~SelectListItem/Text|text~www.idevgame.com--end--
+uid~91220|path~ServerListDialog/Header/Title|text~服务器配置--end--
+uid~91222|path~ServerListDialog/BtnPanel/Text|text~编辑主机--end--
+uid~91314|path~ServerListDialog/BtnPanel/AddHost/Text|text~添加--end--
+uid~91320|path~ServerListDialog/BtnPanel/Delete/Text|text~删除--end--
+uid~91302|path~ServerListDialog/BtnPanel/Close/Text|text~关闭--end--
+uid~91218|path~ServerListDialog/SelectListItem/Text|text~www.idevgame.com:7200--end--
+uid~29562|path~SettingDialog/Wnd/Header/Title|text~设置--end--
+uid~30044|path~SettingDialog/Wnd/Sidebar/Tabs Grid/Audio/Text|text~声音--end--
+uid~29932|path~SettingDialog/Wnd/Sidebar/Tabs Grid/Control/Text|text~设定--end--
+uid~30016|path~SettingDialog/Wnd/Sidebar/Tabs Grid/JoyStick/Text|text~交互--end--
+uid~29858|path~SettingDialog/Wnd/Sidebar/Tabs Grid/ChangeLogs/Text|text~关于--end--
+uid~29910|path~SettingDialog/Wnd/Sidebar/Tabs Grid/Debug/Text|text~调试--end--
+uid~30070|path~SettingDialog/Wnd/Sidebar/Tabs Grid/Cheat/Text|text~指令--end--
+uid~30050|path~SettingDialog/Wnd/Tabs Content/AudioTab/GameObject/Title Text|text~音量设置--end--
+uid~30856|path~SettingDialog/Wnd/Tabs Content/AudioTab/GameObject/Box 3 (Slider)/BGMSlider/Label|text~背景音量--end--
+uid~30798|path~SettingDialog/Wnd/Tabs Content/AudioTab/GameObject/Box 4 (Advanced Slider)/EffectSlider/Label|text~音效音量--end--
+uid~31118|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Name/Text|text~玩家名称--end--
+uid~31110|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Performance/Text|text~帧率--end--
+uid~31756|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Performance/PerformanceGroup/LowPerformance/Label|text~低帧率--end--
+uid~31702|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Performance/PerformanceGroup/LowMiddle/Label|text~中低帧率--end--
+uid~31704|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Performance/PerformanceGroup/HighPerformance/Label|text~高帧率--end--
+uid~31770|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Performance/PerformanceGroup/SuperHighPerformance/Label|text~超高帧率--end--
+uid~31104|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/ModelQuality/Text|text~模型品质(若帧率较低可切换到低品质)--end--
+uid~31800|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/ModelQuality/QualityGroup/Low/Label|text~低--end--
+uid~31698|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/ModelQuality/QualityGroup/Medium/Label|text~中--end--
+uid~31700|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/ModelQuality/QualityGroup/High/Label|text~高--end--
+uid~31128|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/Text|text~其他--end--
+uid~31706|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/ChangeV107/Text|text~切换到1.07--end--
+uid~31674|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/ChangeV907/Text|text~切换到9.07--end--
+uid~31710|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/DoScript/Text|text~输入指令--end--
+uid~31766|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/DeleteState/Text|text~默认配置--end--
+uid~31672|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/UnlockAll/Text|text~解锁全关卡--end--
+uid~31790|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/ShowFPS/Label|text~显示帧率--end--
+uid~31708|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/ShowTargetBlood/Label|text~显示血量--end--
+uid~31738|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/EnableSFX/Label|text~显示特效按钮--end--
+uid~31750|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/EnableRobot/Label|text~可添加电脑--end--
+uid~31744|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/EnableWeaponChoose/Label|text~可挑选武器--end--
+uid~31688|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/ShowWayPoint/Label|text~显示路点--end--
+uid~31798|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/EnableInfiniteAngry/Label|text~无限气--end--
+uid~31668|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/EnableGodMode/Label|text~一击必杀--end--
+uid~31796|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/Particle/Label|text~关闭粒子特效--end--
+uid~31768|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/EnableUnDead/Label|text~无敌--end--
+uid~31670|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/HidePlayer/Label|text~隐身--end--
+uid~31724|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/CameraLock/Label|text~视角锁定--end--
+uid~31776|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/EnableJoy/Label|text~使用摇杆--end--
+uid~31722|path~SettingDialog/Wnd/Tabs Content/ControlTab/Scroll View/Viewport/Axis/Other/OtherConfig/JoyOnlyRotate/Label|text~摇杆仅旋转--end--
+uid~31342|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/Info/AppVer/Text|text~游戏版本号:--end--
+uid~31340|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/Info/AppVer/AppVerText|text~1.0.0--end--
+uid~31274|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/Info/VerInfo/Text|text~流星版本号:--end--
+uid~31272|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/Info/VerInfo/MeteorVerText|text~9.07--end--
+uid~30842|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/Info|text~网站--end--
+uid~30870|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/URI|text~http://www.weeirjoe.xyz--end--
+uid~30806|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/NewVersion|text~最新版本号：0.2.8.0--end--
+uid~30898|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/GetNewVersion|text~下载最新版本--end--
+uid~30854|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/Lisence|text~版权说明--end--
+uid~30900|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/LisenceInfo|text~使用了单机游戏<流星蝴蝶剑>内的全部资源
+使用了流星资源网（https://www.lxres.com）上的部分武器模型,贴图资源
+项目源码:https://github.com/365082218/meteor_original_ios--end--
+uid~30818|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/Thanks|text~感谢
+昱泉国际
+http://www.interserv.com.tw
+隐龙轩
+http://www.yfzz.net
+流星资源网
+https://www.lxres.com
+易武会友
+http://www.yimenonline.com
+
+QQ群(718605098)-玩家交流群1
+QQ群(776156122)-玩家交流群2
+QQ群(12017091)-流星资源网作者交流
+QQ群(415233307)-流星模型交流
+QQ群(149750002)-十年流星十年永恒--end--
+uid~30886|path~SettingDialog/Wnd/Tabs Content/ChangeLogTab/Scroll View/Viewport/Content/ChangeLog|text~1.1版本--end--
+uid~31120|path~SettingDialog/Wnd/Tabs Content/DebugTab/Scroll View/Viewport/Content/Level_debug/Text|text~皇陵地柱--end--
+uid~29634|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/UIButtonLabel|text~按键设置--end--
+uid~30508|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/FunctionGrid/SetJoyPosition/Text|text~战斗界面设置--end--
+uid~30600|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/FunctionGrid/EnableGamePad/Label|text~使用手柄--end--
+uid~30610|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/FunctionGrid/EnableMouse/Label|text~鼠标控制视角--end--
+uid~29600|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyStickLabel|text~手柄设置--end--
+uid~30592|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyW/Text|text~上:[无]--end--
+uid~30466|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyS/Text|text~下:[无]--end--
+uid~30552|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyA/Text|text~左:[无]--end--
+uid~30556|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyD/Text|text~右:[无]--end--
+uid~30562|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyAttack/Text|text~攻击:[无]--end--
+uid~30506|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyDefence/Text|text~防御:[无]--end--
+uid~30520|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyJump/Text|text~跳跃:[无]--end--
+uid~30496|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyBurst/Text|text~暴气:[无]--end--
+uid~30576|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyChangeWeapon/Text|text~切换武器:[无]--end--
+uid~30554|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyDrop/Text|text~丢弃武器:[无]--end--
+uid~30568|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyCrouch/Text|text~蹲下:[无]--end--
+uid~30514|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyUnlock/Text|text~锁定:[无]--end--
+uid~30570|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyCW/Text|text~视角向上:[无]--end--
+uid~30522|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyCS/Text|text~视角向下:[无]--end--
+uid~30450|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyCA/Text|text~视角左旋:[无]--end--
+uid~30516|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyCD/Text|text~视角右转:[无]--end--
+uid~30578|path~SettingDialog/Wnd/Tabs Content/JoyStickTab/JoyGrid/JoyHelp/Text|text~疗伤:[无]--end--
+uid~30828|path~SettingDialog/Wnd/Tabs Content/CheatTab/Scroll View/Viewport/Content/CheatTitle|text~指令说明--end--
+uid~30896|path~SettingDialog/Wnd/Tabs Content/CheatTab/Scroll View/Viewport/Content/CheatCodeList|text~1.1版本--end--
+uid~88318|path~SfxDialog/Header/Title|text~特效--end--
+uid~88314|path~SfxDialog/PagePrev/Text|text~上一页--end--
+uid~88320|path~SfxDialog/PageNext/Text|text~下一页--end--
+uid~88278|path~SfxDialog/PageText|text~7/8--end--
+uid~88084|path~StartupWnd/InfoPanel/Tips|text~流星正在启动--end--
+uid~88114|path~StartupWnd/InfoPanel/LoadingProgressBar/Text|text~100%--end--
+uid~87946|path~TipDialog/Header/Title|text~『火影-鸣人』--end--
+uid~87942|path~TipDialog/Content/Tips|text~卸载资料片[流星蝴蝶剑-后传]中--end--
+uid~86910|path~UIAdjustWnd/Position|text~125,244--end--
+uid~86916|path~UIAdjustWnd/Label|text~坐标--end--
+uid~87168|path~UIAdjustWnd/UI/AlphaSliderBar/Label|text~UI透明度--end--
+uid~87206|path~UIAdjustWnd/UI/JoyScale/Label|text~手柄缩放--end--
+uid~87210|path~UIAdjustWnd/UI/ButtonScale/Label|text~按钮缩放--end--
+uid~87160|path~UIAdjustWnd/SysMenu/Close/Text|text~关闭--end--
+uid~87192|path~UIAdjustWnd/SysMenu/Reset/Text|text~重置--end--
+uid~86838|path~UnitTopUI/Name|text~楚天星--end--
+uid~86636|path~UpdateNotice/Window (with Scroll View)/Header/Title|text~发现新版本--end--
+uid~86526|path~UpdateNotice/Window (with Scroll View)/Scroll View/Content/Notice|text~发现新版本:
+ 更新内容
+ 1:增加新的任务
+2:修改支线bug --end--
+uid~86600|path~UpdateNotice/Accept/Text|text~更新--end--
+uid~86588|path~UpdateNotice/Cancel/Text|text~忽略--end--
+uid~86456|path~WaitDialog/GameObject/Title|text~正在保存录像，请等待--end--
+uid~85402|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab0/Text|text~长剑--end--
+uid~85408|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab1/Text|text~匕首--end--
+uid~85384|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab2/Text|text~火枪--end--
+uid~85388|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab3/Text|text~飞镖--end--
+uid~85344|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab4/Text|text~重锤--end--
+uid~85374|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab5/Text|text~大刀--end--
+uid~85358|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab6/Text|text~飞轮--end--
+uid~85324|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab7/Text|text~长枪--end--
+uid~85342|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab8/Text|text~双刺--end--
+uid~85318|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab9/Text|text~乾坤刀--end--
+uid~85360|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab10/Text|text~指虎--end--
+uid~85346|path~WeaponDialog/Window (with Tabs)/Tabs Menu/GridClass/Tab11/Text|text~忍刀--end--
+uid~85074|path~WeaponDialog/Window (with Tabs)/Header/Title|text~武器--end--
+uid~85124|path~WeaponDialog/Window (with Tabs)/Tabs Content/Equip/Text|text~装备--end--
+uid~53054|path~WeaponSelectDialog/Select/Text|text~确定--end--
+uid~52998|path~WeaponSelectDialog/Timeup|text~还剩32秒重开--end--
+uid~53056|path~WeaponSelectDialog/Exit/Text|text~退出房间--end--
+uid~50354|path~WorldTemplate/VLayout/TitleLayout/Task|text~金华城--end--
+uid~50648|path~WorldTemplate/pnl_setting/Axis/Game/GameRule/Text|text~游戏规则--end--
+uid~52106|path~WorldTemplate/pnl_setting/Axis/Game/GameRule/RuleGroup/0/Label|text~盟主--end--
+uid~52210|path~WorldTemplate/pnl_setting/Axis/Game/GameRule/RuleGroup/1/Label|text~暗杀--end--
+uid~52120|path~WorldTemplate/pnl_setting/Axis/Game/GameRule/RuleGroup/2/Label|text~死斗--end--
+uid~50588|path~WorldTemplate/pnl_setting/Axis/Game/GameLife/Text|text~生命上限--end--
+uid~50706|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/Text|text~主武器--end--
+uid~52290|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/0/Label|text~长剑--end--
+uid~52092|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/1/Label|text~匕首--end--
+uid~52270|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/2/Label|text~火枪--end--
+uid~52146|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/3/Label|text~飞镖--end--
+uid~52242|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/4/Label|text~重锤--end--
+uid~52068|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/5/Label|text~大刀--end--
+uid~52268|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/6/Label|text~飞轮--end--
+uid~52150|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/7/Label|text~长枪--end--
+uid~52208|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/8/Label|text~双刺--end--
+uid~52156|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/9/Label|text~乾坤刀--end--
+uid~52064|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/10/Label|text~指虎--end--
+uid~52188|path~WorldTemplate/pnl_setting/Axis/Weapon/FirstWeapon/WeaponGroup/11/Label|text~忍刀--end--
+uid~50704|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/Text|text~副武器--end--
+uid~52284|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/0/Label|text~长剑--end--
+uid~52086|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/1/Label|text~匕首--end--
+uid~52256|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/2/Label|text~火枪--end--
+uid~52098|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/3/Label|text~飞镖--end--
+uid~52216|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/4/Label|text~重锤--end--
+uid~52114|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/5/Label|text~大刀--end--
+uid~52088|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/6/Label|text~飞轮--end--
+uid~52220|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/7/Label|text~长枪--end--
+uid~52218|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/8/Label|text~双刺--end--
+uid~52234|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/9/Label|text~乾坤刀--end--
+uid~52170|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/10/Label|text~指虎--end--
+uid~52282|path~WorldTemplate/pnl_setting/Axis/Weapon/SubWeapon/WeaponGroup/11/Label|text~忍刀--end--
+uid~50490|path~WorldTemplate/pnl_setting/Axis/PlayerModel/Text|text~主角--end--
+uid~51410|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/0/Label|text~孟星魂--end--
+uid~51296|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/1/Label|text~冷燕--end--
+uid~51400|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/2/Label|text~铁胡子--end--
+uid~51230|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/3/Label|text~夜猫子--end--
+uid~51238|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/4/Label|text~破空--end--
+uid~51110|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/5/Label|text~冯浩--end--
+uid~51330|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/6/Label|text~孙剑--end--
+uid~51174|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/7/Label|text~萧安--end--
+uid~51390|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/8/Label|text~子興--end--
+uid~51344|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/9/Label|text~王强--end--
+uid~51424|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/10/Label|text~无名--end--
+uid~51294|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/11/Label|text~叶翔--end--
+uid~51236|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/12/Label|text~小何--end--
+uid~51254|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/13/Label|text~凤凤--end--
+uid~51416|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/14/Label|text~石群--end--
+uid~51364|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/15/Label|text~屠城--end--
+uid~51146|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/16/Label|text~范旋--end--
+uid~51324|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/17/Label|text~高寄萍--end--
+uid~51398|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/18/Label|text~孙玉伯--end--
+uid~51358|path~WorldTemplate/pnl_setting/Axis/PlayerModel/ModelGroup/19/Label|text~律香川--end--
+uid~50776|path~WorldTemplate/pnl_setting/Axis/Option/GameTime/Text|text~时长--end--
+uid~52078|path~WorldTemplate/pnl_setting/Axis/Option/GameTime/TimeGroup/0/Label|text~15分钟--end--
+uid~52112|path~WorldTemplate/pnl_setting/Axis/Option/GameTime/TimeGroup/1/Label|text~30分钟--end--
+uid~52222|path~WorldTemplate/pnl_setting/Axis/Option/GameTime/TimeGroup/2/Label|text~60分钟--end--
+uid~50580|path~WorldTemplate/pnl_setting/Axis/Option/DisallowSpecialWeapon/Text|text~禁用远程武器--end--
+uid~52300|path~WorldTemplate/pnl_setting/Axis/Option/DisallowSpecialWeapon/DisallowGroup/0/Label|text~禁用--end--
+uid~50444|path~WorldTemplate/pnl_setting/Axis/GamePlayer/Text|text~初始战场人数--end--
+uid~51396|path~WorldTemplate/pnl_setting/Axis/GamePlayer/PlayerGroup/0/Label|text~2人--end--
+uid~51292|path~WorldTemplate/pnl_setting/Axis/GamePlayer/PlayerGroup/1/Label|text~4人--end--
+uid~51272|path~WorldTemplate/pnl_setting/Axis/GamePlayer/PlayerGroup/2/Label|text~8人--end--
+uid~51224|path~WorldTemplate/pnl_setting/Axis/GamePlayer/PlayerGroup/3/Label|text~12人--end--
+uid~51310|path~WorldTemplate/pnl_setting/Axis/GamePlayer/PlayerGroup/4/Label|text~16人--end--
+uid~50310|path~WorldTemplate/pnl_menu/CreateWorld/Text|text~创建战场--end--
+uid~50356|path~WorldTemplate/pnl_menu/Return/Text|text~返回--end--

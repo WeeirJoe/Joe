@@ -47,14 +47,13 @@ public class FightBox : NetBehaviour {
             }
         }
     }
-    Collider[] colliders = new Collider[128];
     public override void NetUpdate() {
         if (detectCollsion) {
             bool processed = false;
             if (box is BoxCollider) {
                 BoxCollider b = box as BoxCollider;
                 center = box.transform.TransformPoint(b.center);
-                half = Vector3.Scale(b.size, b.transform.localScale) / 2;
+                half = Vector3.Scale(b.size, b.transform.localScale) / 2.0f;
                 processed = true;
             } else if (box is MeshCollider) {
                 //MeshCollider m = box as MeshCollider;
@@ -73,8 +72,8 @@ public class FightBox : NetBehaviour {
             }
 
             if (processed) {
-                int num = CollisionCheck.OverlapBox(center, half, box.transform.rotation, colliders, 1 << LayerManager.Bone | 1 << LayerManager.DetectAll | 1 << LayerManager.Trigger);
-                for (int i = 0; i < num; i++) {
+                Collider[] colliders = Physics.OverlapBox(center, half, box.transform.rotation, 1 << LayerManager.Bone | 1 << LayerManager.DetectAll | 1 << LayerManager.Trigger);
+                for (int i = 0; i < colliders.Length; i++) {
                     if (colliders[i] is BoxCollider) {
                         BoxCollider boxBone = colliders[i] as BoxCollider;
                         if (Owner != null && Owner.HurtList.Contains(boxBone))
@@ -86,22 +85,22 @@ public class FightBox : NetBehaviour {
         }    
     }
 
-    //void OnDrawGizmos() {
-        
-    //    //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
-    //    if (detectCollsion) {
-    //        var cacheMatrix = Gizmos.matrix;
-    //        //Gizmos.color = Color.red;
-    //        //Gizmos.matrix = transform.localToWorldMatrix;
-    //        //Gizmos.DrawWireCube(boxCenter, boxSize);
-    //        Gizmos.color = Color.blue;
-    //        Matrix4x4 m = new Matrix4x4();
-    //        m.SetTRS(transform.position, box.transform.rotation, Vector3.one);
-    //        Gizmos.matrix = m;
-    //        Gizmos.DrawWireCube(transform.InverseTransformPoint(center), half * 2);
-    //        Gizmos.matrix = cacheMatrix;
-    //    }
-    //}
+    void OnDrawGizmos() {
+
+        //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
+        if (detectCollsion) {
+            var cacheMatrix = Gizmos.matrix;
+            //Gizmos.color = Color.red;
+            //Gizmos.matrix = transform.localToWorldMatrix;
+            //Gizmos.DrawWireCube(boxCenter, boxSize);
+            Gizmos.color = Color.blue;
+            Matrix4x4 m = new Matrix4x4();
+            m.SetTRS(transform.position, box.transform.rotation, Vector3.one);
+            Gizmos.matrix = m;
+            Gizmos.DrawWireCube(transform.InverseTransformPoint(center), half * 2);
+            Gizmos.matrix = cacheMatrix;
+        }
+    }
 
     public new void OnDestroy() {
         base.OnDestroy();

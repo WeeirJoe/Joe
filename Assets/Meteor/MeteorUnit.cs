@@ -110,11 +110,10 @@ public class Buff {
         if (refresh_type == 99999)//按固定时间0.1秒刷新.
             Units[unit].refresh_round_tick = (refresh_delay == 0 ? 0.1f : refresh_delay);//没有值就每0.1S刷新，否则就以值为刷新
 
-        //if (unit.Attr.IsPlayer)
-        //{
-        //    //FightWnd.Instance.AddBuff(this);
-        //    //FightWnd.Instance.UpdatePlayerInfo();
-        //}
+        if (unit.Attr.IsPlayer) {
+            if (FightState.Exist())
+                FightState.Instance.UpdatePlayerInfo();
+        }
     }
 
     public void Clear() {
@@ -379,12 +378,19 @@ public partial class MeteorUnit : NetBehaviour {
         }
     }
 
+    public bool angryMax { get; set; }
     public int AngryValue {
         get {
+            if (angryMax)
+                return CombatData.ANGRYMAX;
             return Attr.AngryValue;
         }
         set {
-            Attr.AngryValue = Mathf.Clamp(value, 0, 100);
+            if (angryMax)
+                Attr.AngryValue = CombatData.ANGRYMAX;
+            else {
+                Attr.AngryValue = Mathf.Clamp(value, 0, 100);
+            }
             if (Attr.IsPlayer && FightState.Exist())
                 FightState.Instance.UpdateAngryBar();
         }
@@ -726,31 +732,30 @@ public partial class MeteorUnit : NetBehaviour {
         } else {
             if (Attr.IsPlayer) {
                 if (!meteorController.InputLocked && !Main.Ins.GameBattleEx.BattleFinished()) {
-                    float yRotate = 0;//量1000
+                    float yRotate = 0;
+                    float yRotate1 = 0;
+                    float yRotate2 = 0;
                     if (ActionMgr.CanRotateY) {
-#if STRIP_KEYBOARD
                     //读取手柄上的相机左旋转，相机右旋.
                     if (Main.Ins.JoyStick.isActiveAndEnabled) {
-                        yRotate = Main.Ins.JoyStick.CameraAxisX * 5 * GameStateMgr.Ins.gameStatus.AxisSensitivity.x;
+                        yRotate1 = Main.Ins.JoyStick.CameraAxisX * 5 * GameStateMgr.Ins.gameStatus.AxisSensitivity.x;
                     } else {
-                        yRotate = NGUICameraJoystick.Ins.deltaLast.x * GameStateMgr.Ins.gameStatus.AxisSensitivity.x;
+                        yRotate1 = NGUICameraJoystick.Ins.deltaLast.x * GameStateMgr.Ins.gameStatus.AxisSensitivity.x;
                     }
-#else
-                        yRotate = Input.GetAxis("Mouse X") * 5 * GameStateMgr.Ins.gameStatus.AxisSensitivity.x;
-#endif
+                        yRotate2 = Input.GetAxis("Mouse X") * 5 * GameStateMgr.Ins.gameStatus.AxisSensitivity.x;
                     }
+                    yRotate = GameStateMgr.Ins.gameStatus.UseMouse ? yRotate2 : yRotate1;
 
                     float xRotate = 0;
-#if STRIP_KEYBOARD
+                    float xRotate1 = 0;
+                    float xRotate2 = 0;
                     if (Main.Ins.JoyStick.isActiveAndEnabled) {
-                        xRotate = Main.Ins.JoyStick.CameraAxisY * 2 * GameStateMgr.Ins.gameStatus.AxisSensitivity.y;
+                        xRotate1 = Main.Ins.JoyStick.CameraAxisY * 2 * GameStateMgr.Ins.gameStatus.AxisSensitivity.y;
                     } else {
-                        xRotate = NGUICameraJoystick.Ins.deltaLast.y * GameStateMgr.Ins.gameStatus.AxisSensitivity.y;
+                        xRotate1 = NGUICameraJoystick.Ins.deltaLast.y * GameStateMgr.Ins.gameStatus.AxisSensitivity.y;
                     }
-#else
-                    xRotate = Input.GetAxis("Mouse Y") * 2 * GameStateMgr.Ins.gameStatus.AxisSensitivity.y;
-#endif
-
+                    xRotate2 = Input.GetAxis("Mouse Y") * 2 * GameStateMgr.Ins.gameStatus.AxisSensitivity.y;
+                    xRotate = GameStateMgr.Ins.gameStatus.UseMouse ? xRotate2 : xRotate1;
                     if (xRotate != 0 || yRotate != 0) {
                         //if (CombatData.Ins.Replay) {
                         //    OnPlayerMouseDelta(xRotate, yRotate);
@@ -1059,7 +1064,7 @@ public partial class MeteorUnit : NetBehaviour {
         Pause = false;
         Vector3 vec = transform.position;
         Quaternion rotation = transform.rotation;
-
+        
         tag = "meteorUnit";
         ModelId = modelIdx;
         Attr = mon;
@@ -1074,6 +1079,7 @@ public partial class MeteorUnit : NetBehaviour {
             if (StateMachine != null) {
                 StateMachine.Init(this);
             }
+            angryMax = GameStateMgr.Ins.gameStatus.EnableInfiniteAngry && Attr.IsPlayer;
         }
 
         if (meteorController == null)
@@ -1260,7 +1266,7 @@ public partial class MeteorUnit : NetBehaviour {
             //跳跃键现在状态是按下，按下的时间超过0.3S
             if (ninjaState == NinjaState.Ready) {
                 if (meteorController.Input.HasInput((int)EKeyList.KL_Jump, (int)EInputType.EIT_PressingEnough)) {
-                    Jump(false, CommonAction.Jump);
+                    Jump(1, CommonAction.Jump);
                     return true;
                 }
             }
@@ -1390,10 +1396,10 @@ public partial class MeteorUnit : NetBehaviour {
 
 
     public void DoBreakOut() {
-        if (AngryValue >= 60 || GameStateMgr.Ins.gameStatus.EnableInfiniteAngry) {
+        if (AngryValue >= 60) {
             ActionMgr.ChangeAction(CommonAction.BreakOut, 0);
             ActionMgr.LockTime(0);
-            AngryValue -= GameStateMgr.Ins.gameStatus.EnableInfiniteAngry ? 0 : 60;
+            AngryValue -= 60;
             if (Attr.IsPlayer) {
                 if (FightState.Exist())
                     FightState.Instance.UpdateAngryBar();
@@ -1610,11 +1616,11 @@ public partial class MeteorUnit : NetBehaviour {
                                 float left = 100;
                                 float middle = 100;
                                 float right = 100;
-                                if (Physics.Raycast(transform.position, Quaternion.AngleAxis(-5, Vector3.up) * -transform.forward, out hit, charController.radius + 5, LayerManager.SceneMask))
+                                if (Physics.Raycast(transform.position, Quaternion.AngleAxis(-15, Vector3.up) * -transform.forward, out hit, charController.radius + 5, LayerManager.SceneMask))
                                     left = Vector3.Distance(hit.point, transform.position);
                                 if (Physics.Raycast(transform.position, -transform.forward, out hit, charController.radius + 5, LayerManager.SceneMask))
                                     middle = Vector3.Distance(hit.point, transform.position);
-                                if (Physics.Raycast(transform.position, Quaternion.AngleAxis(5, Vector3.up) * -transform.forward, out hit, charController.radius + 5, LayerManager.SceneMask))
+                                if (Physics.Raycast(transform.position, Quaternion.AngleAxis(15, Vector3.up) * -transform.forward, out hit, charController.radius + 5, LayerManager.SceneMask))
                                     right = Vector3.Distance(hit.point, transform.position);
                                 float fMin = Mathf.Min(left, middle, right);
                                 if (fMin != 100) {
@@ -1814,10 +1820,10 @@ public partial class MeteorUnit : NetBehaviour {
 
     //小跳版本0.12高度
     //中跳版本0.32高度
-    public void Jump(bool ShortJump, int act = CommonAction.Jump) {
+    public void Jump(float ShortScale, int act = CommonAction.Jump) {
         canControlOnAir = true;
         OnGround = false;
-        float ShortScale = ShortJump ? 0.32f:1.0f;
+        //float ShortScale = ShortJump ? 0.32f:1.0f;
         if (StateMachine != null)
             ShortScale = 1.0f;
         float h = CombatData.JumpLimit * ShortScale;
@@ -3169,9 +3175,9 @@ public partial class MeteorUnit : NetBehaviour {
     public void PlaySkill(int skill = 0) {
         //技能0为当前武器绝招
         if (skill == 0) {
-            if (AngryValue >= 100 || GameStateMgr.Ins.gameStatus.EnableInfiniteAngry) {
+            if (AngryValue >= 100) {
                 //得到武器的大绝pose号码。
-                AngryValue -= GameStateMgr.Ins.gameStatus.EnableInfiniteAngry ? 0 : 100;
+                AngryValue -= 100;
                 int skillPose = ActionInterrupt.Ins.GetSkillPose(this);
                 if (skillPose != 0) {
                     ActionMgr.ChangeAction(skillPose, 0.1f);

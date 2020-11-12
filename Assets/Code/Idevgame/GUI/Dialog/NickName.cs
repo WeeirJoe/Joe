@@ -30,7 +30,7 @@ public class NickName : Dialog
         });
         Nick = Control("Nick").GetComponent<InputField>();
         if (string.IsNullOrEmpty(GameStateMgr.Ins.gameStatus.NickName))
-            Nick.text = "昱泉杀手";
+            Nick.text = "流星玩家";
         else
             Nick.text = GameStateMgr.Ins.gameStatus.NickName;
     }

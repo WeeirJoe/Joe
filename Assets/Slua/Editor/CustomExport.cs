@@ -1,26 +1,4 @@
-﻿// The MIT License (MIT)
-
-// Copyright 2015 Siney/Pangweiwei siney@yeah.net
-// 
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-// 
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-// 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-
-namespace SLua
+﻿namespace SLua
 {
     using System.Collections.Generic;
     using System;
@@ -35,7 +13,7 @@ namespace SLua
 
         public static void OnAddCustomClass(LuaCodeGen.ExportGenericDelegate add)
         {
-			// below lines only used for demostrate how to add custom class to export, can be delete on your app
+			// 以下几行仅用于演示如何添加自定义类导出，可以在您的应用程序上删除
 
             add(typeof(System.Func<int>), null);
             add(typeof(System.Action<int, string>), null);
@@ -44,10 +22,10 @@ namespace SLua
             add(typeof(Dictionary<int, string>), "DictIntStr");
             add(typeof(string), "String");
             
-            // add your custom class here
-            // add( type, typename)
-            // type is what you want to export
-            // typename used for simplify generic type name or rename, like List<int> named to "ListInt", if not a generic type keep typename as null or rename as new type name
+            // 在此处添加自定义类
+            // 添加（类型，类型名称）
+            // 类型是要导出的内容
+            // 用于简化泛型类型名或重命名的typename，如List<int>命名为“ListInt”，如果不是泛型类型，则保持typename为null或重命名为新类型名
         }
 
         public static void OnAddCustomAssembly(ref List<string> list)

@@ -331,7 +331,6 @@ public class ActionManager {
         mOwner.UpdateNinjaState(NinjaState.None);
         if (mActiveAction != null) {
             PosAction act = null;
-            int curIndex = GetCurrentFrameIndex();
             for (int i = 0; i < mActiveAction.ActionList.Count; i++) {
                 if (mActiveAction.ActionList[i].Type.Equals("Blend")) {
                     act = mActiveAction.ActionList[i];
@@ -448,8 +447,6 @@ public class ActionManager {
                             }
                         }
                     }
-                } else if (mOwner.ActionMgr.onhurt) {
-                    //浮空受击.
                 } else if (mActiveAction.Link != 0) {
                     if (mActiveAction.Next != null)
                         ChangeAction(mActiveAction.Link, mActiveAction.Next.Time);
@@ -517,7 +514,7 @@ public class ActionManager {
                                 ChangeAction(CommonAction.Idle, 0.1f);
                         }
                     } else if (mOwner.ActionMgr.onhurt) {
-                        //Debug.Log("目标受到伤害浮空");
+
                     } else
                         ChangeAction(CommonAction.JumpFall, 0.1f);
                 }
@@ -705,6 +702,9 @@ public class ActionManager {
                 mOwner.meteorController.LockMove(false);//爬墙也需要按住方向
             }
             else if (IsReadyAction(idx)) {
+                mOwner.meteorController.LockMove(false);
+            }
+            else if (idx == CommonAction.GunIdle) {
                 mOwner.meteorController.LockMove(false);
             }
             else
@@ -922,7 +922,7 @@ public class ActionManager {
             lastFrameStatus.DummyPos[i] = Characterloader.dummy[i].localPosition;
         }
     }
-
+    
     void UpdateAnimation2() {
         if (mActiveAction != null) {
             if (blendTime == 0.0f) {
@@ -1184,14 +1184,8 @@ public class ActionManager {
     }
 
     void PlayEffect() {
-        float timePlayed = 0;
-        //锤绝-匕首A+上上A，音效有点问题 剑 前前A2
-        //if (po.Idx == 325 || po.Idx == 253 || po.Idx == 276 || po.Idx == 560 || po.Idx == 471)
-        //if (po.Idx != 325)
-        timePlayed = GetTimePlayed(curIndex);
         if (!string.IsNullOrEmpty(mActiveAction.EffectID) && !string.Equals(mActiveAction.EffectID, "0")) {
-            Characterloader.sfxEffect = SFXLoader.Ins.PlayEffect(string.Format("{0}.ef", mActiveAction.EffectID), mOwner, timePlayed);
-
+            Characterloader.sfxEffect = SFXLoader.Ins.PlayEffect(string.Format("{0}.ef", mActiveAction.EffectID), mOwner, playedTimeFadeInWrapped);
             //表明特效是由动作触发的,不在该动作中关闭特效的攻击盒时,特效攻击盒仍存在
             //这种一般是特效出来后，在角色受到攻击前打开了特效的攻击盒，但角色受到攻击打断了动作，会立刻关闭攻击特效的攻击属性，这种应该是不对的.
             //类似雷电斩，特效出来后只要攻击盒被打开过，一旦动作被打断，那么攻击特效会一直到特效完毕.
@@ -1383,10 +1377,23 @@ public class ActionManager {
         }
     }
 
+    //在某一帧之前
+    bool IsBeforeFrame(int frame) {
+        int f = Mathf.Clamp(frame, mActiveAction.Start, mActiveAction.End);
+        return playedTimeFadeInWrapped <= mActiveAction.KeyFrames[f - mActiveAction.Start];
+    }
+
+    //是否在指定的2帧之间
+    public bool IsInKeyFrame(int min, int max) {
+        int start = Mathf.Clamp(min, mActiveAction.Start, mActiveAction.End);
+        int end = Mathf.Clamp(max, mActiveAction.Start, mActiveAction.End); 
+        return (playedTimeFadeInWrapped >= mActiveAction.KeyFrames[start-mActiveAction.Start] && playedTimeFadeInWrapped <= mActiveAction.KeyFrames[end-mActiveAction.Start]);
+    }
+
     void ChangeAttack() {
         bool open = false;
         for (int i = 0; i < mActiveAction.Attack.Count; i++) {
-            if (curIndex >= mActiveAction.Attack[i].Start && curIndex <= mActiveAction.Attack[i].End) {
+            if (IsInKeyFrame(mActiveAction.Attack[i].Start, mActiveAction.Attack[i].End)) {
                 mOwner.ChangeAttack(mActiveAction.Attack[i]);
                 open = true;
                 break;
@@ -1402,7 +1409,7 @@ public class ActionManager {
             return;
         //开启武器拖尾
         if (mActiveAction.Drag != null) {
-            if (curIndex >= mActiveAction.Drag.Start && curIndex <= mActiveAction.Drag.End)
+            if (IsInKeyFrame(mActiveAction.Drag.Start, mActiveAction.Drag.End))
                 mOwner.ChangeWeaponTrail(mActiveAction.Drag);
             else
                 mOwner.ChangeWeaponTrail(null);
@@ -1716,7 +1723,7 @@ public class Pose {
     public int GetFrame(float t) {
         int ret = 0;
         for (int i = 0; i < KeyFrames.Count; i++) {
-            if (KeyFrames[i] <= t)
+            if (KeyFrames[i] < t)
                 ret = i;
             else
                 break;

@@ -18,7 +18,7 @@ function npc15_02()
 	class.Aim = 80;
 	class.GetItem = 50;
 	class.Spawn = 71;
-	class.HP = 5000;
+	class.HP = 3000;
 	class.g_selfAddr = 0;
 	class.g_self = 0;
 	return class;

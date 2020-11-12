@@ -294,9 +294,9 @@ public class GameState {
     public bool DisableParticle;//无粒子特效
     public bool SnowParticle;//雪粒子
     public bool UseGamePad;//使用手柄设备-不显示战斗UI的操作部分-当未识别到手柄设备时，不起效
+    public bool UseMouse;//使用鼠标控制视角
     public bool JoyEnable;//使用摇杆
     public bool JoyRotateOnly;//摇杆仅控制方向-否则还控制位移
-    public bool SkipVideo;//忽略过场视频
     public int UseModel = -1;//强制使用的主角模型,可能会被特殊关卡设置无效 默认为-1
     public Dictionary<EKeyList, KeyCode> KeyMapping = new Dictionary<EKeyList, KeyCode>();//虚拟键映射关系.
     public List<ServerInfo> ServerList;//自定义服务器
@@ -407,8 +407,8 @@ public class GameStateMgr:Singleton<GameStateMgr>
             gameStatus.Quality = 0;
             gameStatus.DisableParticle = true;
             gameStatus.AutoLock = true;
-            gameStatus.SkipVideo = true;
             gameStatus.UseGamePad = false;
+            gameStatus.UseMouse = false;
             gameStatus.JoyEnable = true;
             gameStatus.JoyRotateOnly = false;
             gameStatus.UseModel = -1;
@@ -569,8 +569,7 @@ public class CombatData:Singleton<CombatData>
     public bool Replay { get { return GRecord != null; } }
     public Type GScriptType;
     public long RandSeed;
-    public System.Random Random;
-    public static float DamageDetectDelay = 0.33f;//伤害检测间隔，持续时间长的攻击盒，可以伤害更多次敌人
+    public static float DamageDetectDelay = 0.25f;//伤害检测间隔，持续时间长的攻击盒，可以伤害更多次敌人
     bool mPauseAll;
     public Vector3 BodyHeight = new Vector3(0, 28, 0);
     public Chapter Chapter;
@@ -602,7 +601,7 @@ public class CombatData:Singleton<CombatData>
     public static float PlayerLeave = 6400;//隐身衣状态下，视野丢失所需距离
     public static float FollowDistanceEnd = 10000;//距离小于100结束跟随
     public static float FollowDistanceStart = 14400;//距离超过120开始跟随
-    public const int BreakChance = 1;//3%爆气几率
+    public const int BreakChance = 3;//千分之三爆气几率
     public const int CombatChancePerThink = 3;//THINK越大，连击概率越大
     public static float DistanceSkipAngle = 3600;//距离足够近时，不论角度如何都应有感知
     public static float WallForce = 1000;//贴紧墙壁受到的推开速度 

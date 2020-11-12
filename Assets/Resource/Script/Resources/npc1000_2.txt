@@ -18,7 +18,7 @@ function npc1000_2()
 	class.Aim = 50;
 	class.GetItem = 0;
 	class.Spawn = 13;
-	class.HP = 10000;
+	class.HP = 8000;
 	class.g_selfAddr = 0;
 	class.g_self = 0;
 	return class;

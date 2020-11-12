@@ -18,7 +18,7 @@ function npc05_06()
 	class.Aim = 70;
 	class.GetItem = 20;
 	class.Spawn = 38;
-	class.HP = 3500;	
+	class.HP = 2500;	
 
 	class.g_selfAddr = 0;
 	class.g_self = 0;

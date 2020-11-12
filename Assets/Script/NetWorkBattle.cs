@@ -40,8 +40,14 @@ public class NetWorkBattle:Singleton<NetWorkBattle>
                 unit.ActionMgr.SetAction(sync.action);
                 unit.angle = sync.ang;
                 unit.Attr.hpCur = (int)sync.hp;
-                if (unit.ModelId != sync.model)
-                    U3D.ChangePlayerModel(unit, (int)sync.model);
+                if (unit.ModelId != sync.model) {
+                    ModelItem m = null;
+                    if (GameStateMgr.Ins.gameStatus.IsModelInstalled((int)sync.model, ref m)) {
+                        U3D.ChangePlayerModel(unit, (int)sync.model);
+                    } else {
+                        //模型不一样，但是未安装此模型
+                    }
+                }
                 unit.SyncWeapon((int)sync.weapon, (int)sync.weapon1);
                 List<int> buffs = new List<int>();
                 foreach (var each in BuffMng.Ins.BufDict) {
@@ -80,7 +86,7 @@ public class NetWorkBattle:Singleton<NetWorkBattle>
             RoomName = "";
             FrameReplay.Ins.OnDisconnected();
             FrameIndex = ServerFrameIndex = 0;
-            U3D.InsertSystemMsg("与服务器断开链接.");
+            U3D.InsertSystemMsg("玩家服务器断开链接.");
             if (!MainMenuState.Exist)
                 U3D.GoBack();
         }

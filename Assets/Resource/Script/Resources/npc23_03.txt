@@ -18,7 +18,7 @@ function npc23_03()
 	class.Aim = 50;
 	class.GetItem = 0;
 	class.Spawn = 14;
-	class.HP = 4500;
+	class.HP = 3000;
 	
 	class.g_selfAddr = 0;
 	class.g_self = 0;
